@@ -30,7 +30,7 @@ public class BeerController {
 
         HttpHeaders httpHeaders = new HttpHeaders();
         // todo: add the server to the location, like "http://localhost:8080/api/v1/beer"
-        httpHeaders.add("Location", "/api/v1/beer" + savedDto.getId().toString());
+        httpHeaders.add("Location", "/api/v1/beer/" + savedDto.getId().toString());
 
         return new ResponseEntity(httpHeaders, HttpStatus.CREATED);
     }
